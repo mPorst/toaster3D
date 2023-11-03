@@ -6,6 +6,11 @@ set(thisApp "${PROJECT_NAME}_test")
 find_package(OpenGL REQUIRED)
 
 add_subdirectory(OpenGL)
+set(FT_DISABLE_ZLIB TRUE)
+set(FT_DISABLE_BZIP2 TRUE)
+set(FT_DISABLE_PNG TRUE)
+set(FT_DISABLE_HARFBUZZ TRUE)
+set(FT_DISABLE_BROTLI TRUE)
 add_subdirectory(external/freetype)
 add_subdirectory(external/glfw)
 
