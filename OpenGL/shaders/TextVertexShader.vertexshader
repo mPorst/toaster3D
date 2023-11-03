@@ -1,0 +1,14 @@
+#version 330 core
+
+layout(location = 0) in vec2 vertexPosition_screenspace;
+layout(location = 1) in vec2 vertexUV;
+
+out vec2 uv;
+
+uniform mat4 translation;
+
+void main(){
+  gl_Position = translation * vec4(vertexPosition_screenspace.x,-vertexPosition_screenspace.y,0,1);
+
+  uv = vertexUV;
+}

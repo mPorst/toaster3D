@@ -1,0 +1,34 @@
+Language: Cpp
+# We'll use defaults from the LLVM style, but with 2 columns indentation.
+BasedOnStyle: LLVM
+IndentWidth: 2
+ColumnLimit: 120
+UseTab: Never
+DerivePointerAlignment: false
+PointerAlignment: Left
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+  SplitEmptyFunction: true
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLambdasOnASingleLine: None
+AllowShortFunctionsOnASingleLine: All
+AlwaysBreakTemplateDeclarations: true
+
+IndentCaseLabels: true
+# following 4 statements direct the newline-breaks
+# see https://stackoverflow.com/questions/65569245/clang-format-how-to-avoid-new-line-breaks
+AlignOperands: Align
+PenaltyBreakAssignment: 6
+PenaltyBreakAssignment: 20
+PenaltyBreakBeforeFirstCallParameter: 0
+# other penalties
+PenaltyBreakComment: 30
