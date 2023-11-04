@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.20)
 project(renderEngine)
 set(thisApp "${PROJECT_NAME}_test")
 
+set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
+cmake_policy(SET CMP0077 NEW)
+
 find_package(OpenGL REQUIRED)
 
 add_subdirectory(OpenGL)
@@ -16,7 +19,9 @@ add_subdirectory(external/glfw)
 
 add_executable(${thisApp} main.cpp)
 
-target_link_libraries(${thisApp} OpenGLRenderer glfw glew OpenGL::GL freetyped)
+target_link_directories(OpenGLRenderer PUBLIC ${PROJECT_BINARY_DIR}/external/freetype)
+
+target_link_libraries(${thisApp} OpenGLRenderer glfw glew freetyped OpenGL::GL)
 target_compile_features(${thisApp} PRIVATE cxx_std_20)
 
 
