@@ -48,8 +48,8 @@ target_link_libraries(OpenGLRenderer freetyped)
 
 message(${PROJECT_SOURCE_DIR})
 target_include_directories(OpenGLRenderer PRIVATE ${PROJECT_SOURCE_DIR})
-target_include_directories(OpenGLRenderer PUBLIC ${PROJECT_SOURCE_DIR}/OpenGL)
 target_include_directories(OpenGLRenderer PRIVATE ${PROJECT_SOURCE_DIR}/OpenGL/glew/include)
 target_include_directories(OpenGLRenderer PRIVATE ${PROJECT_SOURCE_DIR}/external/glfw/include)
+target_include_directories(OpenGLRenderer PUBLIC ${PROJECT_SOURCE_DIR}/OpenGL)
 target_include_directories(OpenGLRenderer PUBLIC ${PROJECT_SOURCE_DIR}/external/freetype/include)
 
